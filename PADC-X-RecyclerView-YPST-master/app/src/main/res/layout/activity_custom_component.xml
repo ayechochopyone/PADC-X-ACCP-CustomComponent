@@ -1,14 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/holo_purple">
 
     <com.padcmyanmar.padcx.padc_x_recyclerview_ypst.veiws.components.EmotionalFaceView
         android:id="@+id/emotionalFaceView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerInParent ="true"
-        android:layout_margin="@dimen/margin_large"
-        />
-</LinearLayout>
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/margin_large" />
+
+    <com.padcmyanmar.padcx.padc_x_recyclerview_ypst.veiws.components.EmotionalFaceView
+        android:id="@+id/happyButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_margin="@dimen/margin_medium"
+        app:faceColor="@color/holo_red_dark"
+        app:borderColor="@color/color_full_white"
+        app:eyeColor="@color/color_full_white"
+        app:mouthColor="@color/color_full_white"
+        app:state="happy"/>
+
+    <com.padcmyanmar.padcx.padc_x_recyclerview_ypst.veiws.components.EmotionalFaceView
+        android:id="@+id/sadButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/margin_medium"
+        app:faceColor="@color/darker_gray"
+        app:borderColor="@color/black"
+        app:eyeColor="@color/black"
+        app:mouthColor="@color/black"
+        app:state="sad"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnNavigate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/margin_medium"
+        android:src="@drawable/ic_navigate_next_black_24dp" />
+</RelativeLayout>

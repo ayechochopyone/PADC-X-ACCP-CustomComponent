@@ -20,10 +20,14 @@
         </activity>
 
         <activity android:name=".activities.ModifyCustomViewActivity"/>
-        <activity android:name=".activities.CustomComponentActivity"/>
+        <activity android:name=".activities.CustomComponentActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activities.FanControlActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -39,16 +39,16 @@ class PrefixCustomEditText(context: Context, attrs: AttributeSet) :
 
         canvas?.drawText(
             mPrefix,
-            super.getCompoundPaddingLeft().toFloat(), // start position for user's input text
-            baseline.toFloat(), // end position for user's input text
-            paint // paint color for prefix
+            super.getCompoundPaddingLeft().toFloat(),
+            baseline.toFloat(),
+            paint
         )
 
         super.onDraw(canvas)
     }
 
     override fun getCompoundPaddingLeft(): Int {
-        return super.getCompoundPaddingLeft() + mPrefixRect.width()  // It's the sum of padding left distance from xml and prefix width
+        return super.getCompoundPaddingLeft() + mPrefixRect.width()
     }
 
 
